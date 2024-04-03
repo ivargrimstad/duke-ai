@@ -1,2 +1,3 @@
-# duke-ai
-Duke AI
+# Duke AI
+
+Demo code for my AI talks
