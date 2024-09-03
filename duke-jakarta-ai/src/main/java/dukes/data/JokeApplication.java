@@ -1,9 +1,9 @@
-package dukes;
+package dukes.data;
 
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
 
-@ApplicationPath("/")
+@ApplicationPath("")
 public class JokeApplication extends Application {
 
 }

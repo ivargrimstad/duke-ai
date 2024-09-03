@@ -17,6 +17,8 @@
 
     <modules>
         <module>duke-spring-ai</module>
+        <module>duke-quarkus-ai</module>
+        <module>duke-jakarta-ai</module>
     </modules>
 
 </project>
