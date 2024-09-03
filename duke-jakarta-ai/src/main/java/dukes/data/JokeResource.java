@@ -1,19 +1,20 @@
 package dukes.data;
 
-import jakarta.inject.Inject;
-import jakarta.ws.rs.*;
+import dev.langchain4j.model.openai.OpenAiLanguageModel;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Response;
-
-import java.util.List;
 
 @Path("ai")
 public class JokeResource {
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_PLAIN)
     public String joke() {
 
-        return "Hello you";
+        OpenAiLanguageModel model = OpenAiLanguageModel.withApiKey(System.getenv("OPENAI_API_KEY"));
+
+        return model.generate("Tell me a Joke").content();
     }
 }
