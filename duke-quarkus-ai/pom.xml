@@ -41,10 +41,6 @@
             <artifactId>quarkus-langchain4j-openai</artifactId>
             <version>0.17.2</version>
         </dependency>
-        <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-arc</artifactId>
-        </dependency>
     </dependencies>
 
     <build>
@@ -72,9 +68,6 @@
                     <parameters>true</parameters>
                 </configuration>
             </plugin>
-            <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${surefire-plugin.version}</version></plugin>
 
         </plugins>
     </build>
