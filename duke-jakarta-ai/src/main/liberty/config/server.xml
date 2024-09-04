@@ -8,6 +8,6 @@
 
     <httpEndpoint id="defaultHttpEndpoint"
                   httpPort="8080"/>
-    <webApplication location="ROOT.war" contextRoot="/"/>
+    <webApplication location="dukes.war" contextRoot="/dukes"/>
 
 </server>

@@ -34,16 +34,16 @@
             <version>0.33.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>ai.duke</groupId>
-            <artifactId>duke-spring-ai-component</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>ai.duke</groupId>-->
+<!--            <artifactId>duke-spring-ai-component</artifactId>-->
+<!--            <version>0.0.1-SNAPSHOT</version>-->
+<!--        </dependency>-->
 
     </dependencies>
 
     <build>
-        <finalName>ROOT</finalName>
+        <finalName>dukes</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

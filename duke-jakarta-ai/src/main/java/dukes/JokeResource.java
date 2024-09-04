@@ -1,6 +1,5 @@
 package dukes;
 
-import ai.duke.dukespringai.SpringJokeService;
 import dev.langchain4j.model.openai.OpenAiLanguageModel;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
@@ -15,15 +14,15 @@ public class JokeResource {
     @Inject
     private OpenAiLanguageModel model;
 
-    @Inject
-    private SpringJokeService springModel;
+//    @Inject
+//    private SpringJokeService springModel;
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String joke(@QueryParam("message") String message) {
 
 //        OpenAiLanguageModel model = OpenAiLanguageModel.withApiKey(System.getenv("OPENAI_API_KEY"));
-//        return model.generate(message).content();
-          return springModel.tellJoke(message);
+        return model.generate(message).content();
+//          return springModel.tellJoke(message);
     }
 }
