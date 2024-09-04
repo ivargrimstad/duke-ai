@@ -6,6 +6,7 @@ import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
 
 @Path("ai")
@@ -19,10 +20,10 @@ public class JokeResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String joke() {
+    public String joke(@QueryParam("message") String message) {
 
 //        OpenAiLanguageModel model = OpenAiLanguageModel.withApiKey(System.getenv("OPENAI_API_KEY"));
-//        return model.generate("Tell me a Joke").content();
-          return springModel.tellJoke("Tell me a Joke");
+//        return model.generate(message).content();
+          return springModel.tellJoke(message);
     }
 }

@@ -1,6 +1,6 @@
 package dukes;
 
-import ai.duke.dukespringai.DukeWithSpringAiApplication;
+import ai.duke.dukespringai.SpringApplicatonConfig;
 import ai.duke.dukespringai.SpringJokeService;
 import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.ApplicationScoped;
@@ -20,7 +20,7 @@ public class SpringAIProducer {
     @PostConstruct
     public void init() {
         springCtx = new AnnotationConfigApplicationContext();
-        springCtx.register(DukeWithSpringAiApplication.class);
+        springCtx.register(SpringApplicatonConfig.class);
         springCtx.refresh();
     }
 
