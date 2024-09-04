@@ -12,6 +12,9 @@ import jakarta.ws.rs.core.MediaType;
 public class JokeResource {
 
     @Inject
+    private OpenAIClient openAIClient;
+
+    @Inject
     private OpenAiLanguageModel model;
 
 //    @Inject
@@ -21,8 +24,9 @@ public class JokeResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String joke(@QueryParam("message") String message) {
 
+        return openAIClient.callOpenAI();
 //        OpenAiLanguageModel model = OpenAiLanguageModel.withApiKey(System.getenv("OPENAI_API_KEY"));
-        return model.generate(message).content();
+//        return model.generate(message).content();
 //          return springModel.tellJoke(message);
     }
 }
