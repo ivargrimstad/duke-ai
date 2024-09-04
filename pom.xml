@@ -17,8 +17,10 @@
 
     <modules>
         <module>duke-spring-ai</module>
+        <module>duke-spring-ai-component</module>
         <module>duke-quarkus-ai</module>
         <module>duke-jakarta-ai</module>
+        <module>dukes-helidon-ai</module>
     </modules>
 
 </project>

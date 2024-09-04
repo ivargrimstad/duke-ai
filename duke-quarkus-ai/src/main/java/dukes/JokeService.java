@@ -6,6 +6,5 @@ import io.quarkiverse.langchain4j.RegisterAiService;
 @RegisterAiService
 public interface JokeService {
 
-    @UserMessage("Tell me a Joke")
-    String tellJoke();
+    String tellJoke(@UserMessage String message);
 }
