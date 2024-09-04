@@ -37,7 +37,7 @@
     </dependencies>
 
     <build>
-        <finalName>duke-jakarta-ai</finalName>
+        <finalName>ROOT</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -64,6 +64,23 @@
 
                 </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.cargo</groupId>
+                <artifactId>cargo-maven3-plugin</artifactId>
+                <version>1.10.13</version>
+                <configuration>
+                    <container>
+                        <containerId>payara</containerId>
+                        <zipUrlInstaller>
+                            <url>https://repo1.maven.org/maven2/fish/payara/distributions/payara/6.2024.8/payara-6.2024.8.zip</url>
+                        </zipUrlInstaller>
+                    </container>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 </project>
+
+

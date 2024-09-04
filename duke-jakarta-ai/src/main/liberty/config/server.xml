@@ -8,6 +8,6 @@
 
     <httpEndpoint id="defaultHttpEndpoint"
                   httpPort="8080"/>
-    <webApplication location="duke-jakarta-ai.war" contextRoot="/"/>
+    <webApplication location="ROOT.war" contextRoot="/"/>
 
 </server>
