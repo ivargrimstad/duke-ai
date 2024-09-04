@@ -1,4 +1,4 @@
-package dukes;
+package ai.duke;
 
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;

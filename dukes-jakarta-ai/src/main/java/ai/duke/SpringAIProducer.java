@@ -1,4 +1,4 @@
-package dukes;
+package ai.duke;
 
 //import ai.duke.dukespringai.SpringApplicatonConfig;
 //import ai.duke.dukespringai.SpringJokeService;

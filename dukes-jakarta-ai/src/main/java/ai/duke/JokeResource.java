@@ -1,4 +1,4 @@
-package dukes;
+package ai.duke;
 
 import dev.langchain4j.model.openai.OpenAiLanguageModel;
 import jakarta.inject.Inject;
