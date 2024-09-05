@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ai.duke</groupId>
-    <artifactId>dukes-jakartaee-spring-ai</artifactId>
+    <artifactId>dukes-jakartaee-langchain4j-ai</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>Dukes Jakarta EE AI</name>
     <packaging>war</packaging>
@@ -24,9 +24,14 @@
         </dependency>
 
         <dependency>
-            <groupId>ai.duke</groupId>
-            <artifactId>dukes-spring-ai-component</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j</artifactId>
+            <version>0.33.0</version>
+        </dependency>
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-open-ai</artifactId>
+            <version>0.33.0</version>
         </dependency>
 
     </dependencies>
@@ -43,6 +48,21 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.2</version>
+            </plugin>
+
+            <plugin>
+                <groupId>io.openliberty.tools</groupId>
+                <artifactId>liberty-maven-plugin</artifactId>
+                <version>3.8.2</version>
+                <configuration>
+                    <runtimeArtifact>
+                        <groupId>io.openliberty.beta</groupId>
+                        <artifactId>openliberty-runtime</artifactId>
+                        <version>24.0.0.9-beta</version>
+                        <type>zip</type>
+                    </runtimeArtifact>
+
+                </configuration>
             </plugin>
 
             <plugin>

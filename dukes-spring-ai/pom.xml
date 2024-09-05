@@ -5,7 +5,7 @@
 	<groupId>ai.duke</groupId>
 	<artifactId>dukes-spring-ai</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Duke with Spring AI</name>
+	<name>Duke Spring AI</name>
 	<description>Duke Spring AI</description>
 
 	<parent>

@@ -29,7 +29,7 @@
 
         <dependency>
             <groupId>ai.duke</groupId>
-            <artifactId>duke-spring-ai-component</artifactId>
+            <artifactId>dukes-spring-ai-component</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 

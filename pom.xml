@@ -17,7 +17,7 @@
 
     <modules>
         <module>dukes-jakartaee-ai</module>
-        <module>dukes-jakartaee-open-ai</module>
+        <module>dukes-jakartaee-langchain4j-ai</module>
         <module>dukes-jakartaee-cdi-ai</module>
         <module>dukes-jakartaee-spring-ai</module>
         <module>dukes-quarkus-ai</module>
