@@ -15,7 +15,7 @@ public class DukesAIResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String hello(@QueryParam("message") String message) {
+    public String callAI(@QueryParam("message") String message) {
         return jokeService.call(message);
     }
 }

@@ -16,7 +16,7 @@ public class DukesAIResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String joke(@QueryParam("message") String message) {
+    public String callAI(@QueryParam("message") String message) {
 
         return model.generate(message).content();
     }

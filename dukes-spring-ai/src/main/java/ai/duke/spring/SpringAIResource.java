@@ -12,7 +12,7 @@ public class SpringAIResource {
     private SpringAIService springAIService;
 
     @GetMapping("ai")
-    public String tellJoke(@RequestParam("message") String message) {
+    public String callAI(@RequestParam("message") String message) {
 
         return springAIService.tellJoke(message);
     }

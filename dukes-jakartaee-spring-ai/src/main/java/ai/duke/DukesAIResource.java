@@ -16,8 +16,8 @@ public class DukesAIResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String joke(@QueryParam("message") String message) {
+    public String callAI(@QueryParam("message") String message) {
 
-        return springModel.tellJoke(message);
+        return springModel.call(message);
     }
 }

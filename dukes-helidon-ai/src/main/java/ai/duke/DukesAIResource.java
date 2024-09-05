@@ -20,10 +20,10 @@ public class DukesAIResource {
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    public String joke(@QueryParam("message") String message) {
+    public String callAI(@QueryParam("message") String message) {
 
 //        OpenAiLanguageModel model = OpenAiLanguageModel.withApiKey(System.getenv("OPENAI_API_KEY"));
 //        return model.generate(message).content();
-        return springModel.tellJoke(message);
+        return springModel.call(message);
     }
 }

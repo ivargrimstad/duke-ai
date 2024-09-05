@@ -10,7 +10,7 @@ public class SpringAIService {
     @Autowired
     private ChatClient chatClient;
 
-    public String tellJoke(String message) {
+    public String call(String message) {
 
         return chatClient.call(message);
     }
