@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>ai.duke</groupId>
-    <artifactId>dukes-jakarta-ai</artifactId>
+    <artifactId>dukes-jakartaee-ai</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>Dukes Jakarta EE AI</name>
     <packaging>war</packaging>

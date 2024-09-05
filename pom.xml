@@ -16,9 +16,12 @@
     </licenses>
 
     <modules>
-        <module>dukes-helidon-ai</module>
-        <module>dukes-jakarta-ai</module>
+        <module>dukes-jakartaee-ai</module>
+        <module>dukes-jakartaee-open-ai</module>
+        <module>dukes-jakartaee-cdi-ai</module>
+        <module>dukes-jakartaee-spring-ai</module>
         <module>dukes-quarkus-ai</module>
+        <module>dukes-helidon-ai</module>
         <module>dukes-spring-ai</module>
         <module>dukes-spring-ai-component</module>
     </modules>
