@@ -1,6 +1,6 @@
 # Duke AI
 
-Demo code for my AI talks
+Demo code for my AI talks using different tools, libraries, and frameworks.
 
 Export an environment variable with your Open AI Key for these examples to work
 
