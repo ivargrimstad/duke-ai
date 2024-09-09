@@ -17,6 +17,6 @@ public class DukesAIResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String callAI(@QueryParam("message") String message) {
 
-        return openAIClient.callOpenAI();
+        return openAIClient.callOpenAI(message);
     }
 }

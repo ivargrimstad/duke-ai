@@ -14,14 +14,14 @@ import java.util.List;
 public class OpenAIClient {
 
 
-    public String callOpenAI() {
+    public String callOpenAI(String msg) {
 
         Completion completion = new Completion();
         completion.setModel("gpt-4o");
 
         Completion.Message message = new Completion.Message();
         message.setRole("user");
-        message.setContent("Tell me a Joke");
+        message.setContent(msg);
 
         List<Completion.Message> messages = new ArrayList<>();
         messages.add(message);
