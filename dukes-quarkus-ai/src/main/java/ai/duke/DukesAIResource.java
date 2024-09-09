@@ -11,11 +11,11 @@ import jakarta.ws.rs.core.MediaType;
 public class DukesAIResource {
 
     @Inject
-    DukesAIService jokeService;
+    DukesAIService aiService;
 
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String callAI(@QueryParam("message") String message) {
-        return jokeService.call(message);
+        return aiService.call(message);
     }
 }

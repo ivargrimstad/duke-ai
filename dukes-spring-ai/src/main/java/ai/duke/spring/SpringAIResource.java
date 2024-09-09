@@ -14,6 +14,6 @@ public class SpringAIResource {
     @GetMapping("ai")
     public String callAI(@RequestParam("message") String message) {
 
-        return springAIService.tellJoke(message);
+        return springAIService.call(message);
     }
 }
