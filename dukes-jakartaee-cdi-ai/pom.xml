@@ -7,7 +7,7 @@
     <groupId>ai.duke</groupId>
     <artifactId>dukes-jakartaee-cdi-ai</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Dukes Jakarta EE AI</name>
+    <name>Dukes Jakarta EE AI CDI</name>
     <packaging>war</packaging>
 
     <properties>
@@ -58,7 +58,7 @@
                     <runtimeArtifact>
                         <groupId>io.openliberty.beta</groupId>
                         <artifactId>openliberty-runtime</artifactId>
-                        <version>24.0.0.9-beta</version>
+                        <version>24.0.0.10-beta</version>
                         <type>zip</type>
                     </runtimeArtifact>
 
@@ -73,7 +73,7 @@
                     <container>
                         <containerId>payara</containerId>
                         <zipUrlInstaller>
-                            <url>https://repo1.maven.org/maven2/fish/payara/distributions/payara/6.2024.8/payara-6.2024.8.zip</url>
+                            <url>https://repo1.maven.org/maven2/fish/payara/distributions/payara/6.2024.9/payara-6.2024.9.zip</url>
                         </zipUrlInstaller>
                     </container>
                 </configuration>
