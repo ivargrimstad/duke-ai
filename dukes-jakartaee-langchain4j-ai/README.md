@@ -10,6 +10,9 @@ mvn clean package liberty:run
 
 # Payara
 mvn clean package cargo:run
+
+# WildFly
+mvn clean packge wildfly:run
 ```
 
 ## Test

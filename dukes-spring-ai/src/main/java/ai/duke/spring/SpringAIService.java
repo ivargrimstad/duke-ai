@@ -1,6 +1,6 @@
 package ai.duke.spring;
 
-import org.springframework.ai.chat.ChatClient;
+import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -8,10 +8,10 @@ import org.springframework.stereotype.Component;
 public class SpringAIService {
 
     @Autowired
-    private ChatClient chatClient;
+    private ChatClient.Builder builder;
 
     public String call(String message) {
 
-        return chatClient.call(message);
+        return builder.build().prompt(message).call().content();
     }
 }

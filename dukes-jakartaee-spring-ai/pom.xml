@@ -12,7 +12,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.release>22</maven.compiler.release>
+        <maven.compiler.release>23</maven.compiler.release>
     </properties>
 
     <dependencies>
@@ -53,7 +53,7 @@
                     <container>
                         <containerId>payara</containerId>
                         <zipUrlInstaller>
-                            <url>https://repo1.maven.org/maven2/fish/payara/distributions/payara/6.2024.9/payara-6.2024.9.zip</url>
+                            <url>https://repo1.maven.org/maven2/fish/payara/distributions/payara/6.2024.10/payara-6.2024.10.zip</url>
                         </zipUrlInstaller>
                     </container>
                 </configuration>
