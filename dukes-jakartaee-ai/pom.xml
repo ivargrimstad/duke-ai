@@ -47,7 +47,7 @@
                     <runtimeArtifact>
                         <groupId>io.openliberty.beta</groupId>
                         <artifactId>openliberty-runtime</artifactId>
-                        <version>24.0.0.12-beta</version>
+                        <version>25.0.0.2-beta</version>
                         <type>zip</type>
                     </runtimeArtifact>
 
@@ -62,7 +62,7 @@
                     <container>
                         <containerId>payara</containerId>
                         <zipUrlInstaller>
-                            <url>https://repo1.maven.org/maven2/fish/payara/distributions/payara/6.2024.10/payara-6.2024.10.zip</url>
+                            <url>https://repo1.maven.org/maven2/fish/payara/distributions/payara/6.2025.2/payara-6.2025.2.zip</url>
                         </zipUrlInstaller>
                     </container>
                 </configuration>
@@ -75,7 +75,7 @@
                 <configuration>
                     <feature-packs>
                         <feature-pack>
-                            <location>org.wildfly:wildfly-galleon-pack:34.0.0.Final</location>
+                            <location>org.wildfly:wildfly-galleon-pack:35.0.1.Final</location>
                         </feature-pack>
                     </feature-packs>
                     <layers>
