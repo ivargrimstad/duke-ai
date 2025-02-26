@@ -22,7 +22,7 @@ public class DukesAIResource {
     @Produces(MediaType.TEXT_PLAIN)
     public String callAI(@QueryParam("message") String message) {
 
-        OpenAiLanguageModel model = OpenAiLanguageModel.withApiKey(System.getenv("OPENAI_API_KEY"));
+        OpenAiLanguageModel model = OpenAiLanguageModel.builder().apiKey(System.getenv("OPENAI_API_KEY")).build();
         return model.generate(message).content();
 //        return springModel.call(message);
     }

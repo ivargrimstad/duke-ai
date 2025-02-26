@@ -10,6 +10,6 @@ public class OpenAIProducer {
     @Produces
     public OpenAiLanguageModel getOpenAiLanguageModel() {
 
-        return OpenAiLanguageModel.withApiKey(System.getenv("OPENAI_API_KEY"));
+        return OpenAiLanguageModel.builder().apiKey(System.getenv("OPENAI_API_KEY")).build();
     }
 }
