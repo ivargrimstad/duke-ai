@@ -12,14 +12,14 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.release>23</maven.compiler.release>
+        <maven.compiler.release>24</maven.compiler.release>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>jakarta.platform</groupId>
-            <artifactId>jakarta.jakartaee-api</artifactId>
-            <version>11.0.0-M4</version>
+            <artifactId>jakarta.jakartaee-web-api</artifactId>
+            <version>11.0.0</version>
             <scope>provided</scope>
         </dependency>
 
@@ -42,12 +42,12 @@
             <plugin>
                 <groupId>io.openliberty.tools</groupId>
                 <artifactId>liberty-maven-plugin</artifactId>
-                <version>3.8.2</version>
+                <version>3.10.3</version>
                 <configuration>
                     <runtimeArtifact>
                         <groupId>io.openliberty.beta</groupId>
                         <artifactId>openliberty-runtime</artifactId>
-                        <version>25.0.0.2-beta</version>
+                        <version>25.0.0.4-beta</version>
                         <type>zip</type>
                     </runtimeArtifact>
 
@@ -55,27 +55,13 @@
             </plugin>
 
             <plugin>
-                <groupId>org.codehaus.cargo</groupId>
-                <artifactId>cargo-maven3-plugin</artifactId>
-                <version>1.10.13</version>
-                <configuration>
-                    <container>
-                        <containerId>payara</containerId>
-                        <zipUrlInstaller>
-                            <url>https://repo1.maven.org/maven2/fish/payara/distributions/payara/6.2025.2/payara-6.2025.2.zip</url>
-                        </zipUrlInstaller>
-                    </container>
-                </configuration>
-            </plugin>
-
-            <plugin>
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
-                <version>5.0.0.Final</version>
+                <version>5.1.3.Final</version>
                 <configuration>
                     <feature-packs>
                         <feature-pack>
-                            <location>org.wildfly:wildfly-galleon-pack:35.0.1.Final</location>
+                            <location>org.wildfly:wildfly-galleon-pack:36.0.0.Final</location>
                         </feature-pack>
                     </feature-packs>
                     <layers>
@@ -86,6 +72,35 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>payara</id>
+            <properties>
+                <!-- 2024-04-22: Payara does not run on Java 24. Works on 23. -->
+                <maven.compiler.release>23</maven.compiler.release>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.cargo</groupId>
+                        <artifactId>cargo-maven3-plugin</artifactId>
+                        <version>1.10.18</version>
+                        <configuration>
+                            <container>
+                                <containerId>payara</containerId>
+                                <zipUrlInstaller>
+                                    <url>
+                                        https://repo1.maven.org/maven2/fish/payara/distributions/payara/7.2025.1.Alpha1/payara-7.2025.1.Alpha1.zip
+                                    </url>
+                                </zipUrlInstaller>
+                            </container>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
 
 

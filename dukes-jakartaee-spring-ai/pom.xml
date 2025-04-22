@@ -12,14 +12,14 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.release>23</maven.compiler.release>
+        <maven.compiler.release>24</maven.compiler.release>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>jakarta.platform</groupId>
-            <artifactId>jakarta.jakartaee-api</artifactId>
-            <version>11.0.0-M4</version>
+            <artifactId>jakarta.jakartaee-web-api</artifactId>
+            <version>11.0.0</version>
             <scope>provided</scope>
         </dependency>
 
@@ -46,21 +46,51 @@
             </plugin>
 
             <plugin>
-                <groupId>org.codehaus.cargo</groupId>
-                <artifactId>cargo-maven3-plugin</artifactId>
-                <version>1.10.13</version>
+                <groupId>io.openliberty.tools</groupId>
+                <artifactId>liberty-maven-plugin</artifactId>
+                <version>3.10.3</version>
                 <configuration>
-                    <container>
-                        <containerId>payara</containerId>
-                        <zipUrlInstaller>
-                            <url>https://repo1.maven.org/maven2/fish/payara/distributions/payara/6.2025.2/payara-6.2025.2.zip</url>
-                        </zipUrlInstaller>
-                    </container>
+                    <runtimeArtifact>
+                        <groupId>io.openliberty.beta</groupId>
+                        <artifactId>openliberty-runtime</artifactId>
+                        <version>25.0.0.4-beta</version>
+                        <type>zip</type>
+                    </runtimeArtifact>
+
                 </configuration>
             </plugin>
 
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>payara</id>
+            <properties>
+                <!-- 2024-04-22: Payara does not run on Java 24. Works on 23. -->
+                <maven.compiler.release>23</maven.compiler.release>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.cargo</groupId>
+                        <artifactId>cargo-maven3-plugin</artifactId>
+                        <version>1.10.18</version>
+                        <configuration>
+                            <container>
+                                <containerId>payara</containerId>
+                                <zipUrlInstaller>
+                                    <url>
+                                        https://repo1.maven.org/maven2/fish/payara/distributions/payara/7.2025.1.Alpha1/payara-7.2025.1.Alpha1.zip
+                                    </url>
+                                </zipUrlInstaller>
+                            </container>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
 
 

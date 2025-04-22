@@ -4,6 +4,7 @@
         <feature>restfulWS</feature>
         <feature>jsonb</feature>
         <feature>cdi</feature>
+        <feature>servlet</feature>
     </featureManager>
 
     <httpEndpoint id="defaultHttpEndpoint"

@@ -16,7 +16,7 @@
 	</parent>
 
 	<properties>
-		<java.version>23</java.version>
+		<java.version>24</java.version>
 		<spring-ai.version>1.0.0-M6</spring-ai.version>
 	</properties>
 
