@@ -1,0 +1,6 @@
+langchain4j:
+  open-ai:
+    chat-model:
+      enabled: true
+      api-key: "${OPENAI_API_KEY}"
+      model-name: "gpt-4o-mini"
