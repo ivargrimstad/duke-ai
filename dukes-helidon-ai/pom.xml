@@ -11,7 +11,7 @@
     <parent>
         <groupId>io.helidon.applications</groupId>
         <artifactId>helidon-mp</artifactId>
-        <version>4.1.6</version>
+        <version>4.2.4</version>
         <relativePath/>
     </parent>
 
@@ -23,20 +23,14 @@
     <dependencies>
 
         <dependency>
-            <groupId>dev.langchain4j</groupId>
-            <artifactId>langchain4j</artifactId>
-            <version>1.0.0-beta1</version>
+            <groupId>io.helidon.integrations.langchain4j</groupId>
+            <artifactId>helidon-integrations-langchain4j</artifactId>
+            <version>4.2.4</version>
         </dependency>
         <dependency>
-            <groupId>dev.langchain4j</groupId>
-            <artifactId>langchain4j-open-ai</artifactId>
-            <version>1.0.0-beta1</version>
-        </dependency>
-
-        <dependency>
-            <groupId>ai.duke</groupId>
-            <artifactId>dukes-spring-ai-component</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>io.helidon.integrations.langchain4j.providers</groupId>
+            <artifactId>helidon-integrations-langchain4j-providers-open-ai</artifactId>
+            <version>4.2.4</version>
         </dependency>
 
         <dependency>
@@ -83,6 +77,24 @@
                         <id>make-index</id>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>io.helidon.codegen</groupId>
+                            <artifactId>helidon-codegen-apt</artifactId>
+                            <version>4.2.4</version>
+                        </path>
+                        <path>
+                            <groupId>io.helidon.integrations.langchain4j</groupId>
+                            <artifactId>helidon-integrations-langchain4j-codegen</artifactId>
+                            <version>4.2.4</version>
+                        </path>
+                    </annotationProcessorPaths>
+                </configuration>
             </plugin>
         </plugins>
     </build>
