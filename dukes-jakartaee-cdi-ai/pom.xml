@@ -24,16 +24,25 @@
         </dependency>
 
         <dependency>
+            <groupId>dev.langchain4j.cdi</groupId>
+            <artifactId>langchain4j-cdi-portable-ext</artifactId>
+            <version>0.0.7</version>
+        </dependency>
+        <dependency>
+            <groupId>dev.langchain4j.cdi</groupId>
+            <artifactId>langchain4j-cdi-config</artifactId>
+            <version>0.0.7</version>
+        </dependency>
+        <dependency>
             <groupId>dev.langchain4j</groupId>
             <artifactId>langchain4j</artifactId>
-            <version>1.0.0-beta1</version>
+            <version>1.5.0</version>
         </dependency>
         <dependency>
             <groupId>dev.langchain4j</groupId>
             <artifactId>langchain4j-open-ai</artifactId>
-            <version>1.0.0-beta1</version>
+            <version>1.5.0</version>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -47,7 +56,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>3.10.3</version>
+                <version>3.4.0</version>
             </plugin>
 
             <plugin>
