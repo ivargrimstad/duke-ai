@@ -26,7 +26,7 @@
         <dependency>
             <groupId>org.omnifaces</groupId>
             <artifactId>omniai</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0-M1</version>
         </dependency>
 
     </dependencies>
@@ -53,7 +53,7 @@
                     <runtimeArtifact>
                         <groupId>io.openliberty.beta</groupId>
                         <artifactId>openliberty-runtime</artifactId>
-                        <version>25.0.0.10-beta</version>
+                        <version>26.0.0.1-beta</version>
                         <type>zip</type>
                     </runtimeArtifact>
 
@@ -67,12 +67,14 @@
                 <configuration>
                     <feature-packs>
                         <feature-pack>
-                            <location>org.wildfly:wildfly-galleon-pack:36.0.0.Final</location>
+                            <location>org.wildfly:wildfly-galleon-pack:39.0.0.Final</location>
                         </feature-pack>
                     </feature-packs>
                     <layers>
                         <!-- layers may be used to customize the server to provision-->
-                        <layer>cloud-server</layer>
+                        <layer>ee-core-profile-server</layer>
+                        <layer>cdi</layer>
+                        <layer>jaxrs-core</layer>
                     </layers>
                 </configuration>
             </plugin>
@@ -97,7 +99,33 @@
                                 <containerId>payara</containerId>
                                 <zipUrlInstaller>
                                     <url>
-                                        https://repo1.maven.org/maven2/fish/payara/distributions/payara/7.2025.1.Alpha1/payara-7.2025.1.Alpha1.zip
+                                        https://repo1.maven.org/maven2/fish/payara/distributions/payara/7.2025.2/payara-7.2025.2.zip
+                                    </url>
+                                </zipUrlInstaller>
+                            </container>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>glassfish</id>
+            <properties>
+                <!-- 2024-04-22: Payara does not run on Java 24. Works on 23. -->
+                <maven.compiler.release>23</maven.compiler.release>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.cargo</groupId>
+                        <artifactId>cargo-maven3-plugin</artifactId>
+                        <version>1.10.26</version>
+                        <configuration>
+                            <container>
+                                <containerId>glassfish8x</containerId>
+                                <zipUrlInstaller>
+                                    <url>
+                                        https://github.com/eclipse-ee4j/glassfish/releases/download/8.0.0-M15/glassfish-8.0.0-M15.zip
                                     </url>
                                 </zipUrlInstaller>
                             </container>

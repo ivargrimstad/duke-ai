@@ -15,11 +15,11 @@ public class DukesAIResource {
 
 
 
-    @Inject
     @AI(provider = AIProvider.OPENAI,
             apiKey = "${System.getenv('OPENAI_API_KEY')}",
-            model = "gpt-4"
+            model = "gpt-5.2"
     )
+    @Inject
     private AIService aiService;
 
     @GET
