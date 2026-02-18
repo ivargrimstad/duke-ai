@@ -3,9 +3,10 @@
         <platform>jakartaee-11.0</platform>
         <feature>restfulWS</feature>
         <feature>jsonb</feature>
+        <feature>jsonp</feature>
         <feature>cdi</feature>
-        <feature>servlet</feature>
         <feature>mpConfig-3.1</feature>
+        <feature>expressionLanguage</feature>
     </featureManager>
 
     <httpEndpoint id="defaultHttpEndpoint"
