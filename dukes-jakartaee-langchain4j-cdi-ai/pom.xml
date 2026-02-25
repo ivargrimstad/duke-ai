@@ -24,11 +24,25 @@
         </dependency>
 
         <dependency>
-            <groupId>org.omnifaces</groupId>
-            <artifactId>omnihai</artifactId>
-            <version>1.0</version>
+            <groupId>dev.langchain4j.cdi</groupId>
+            <artifactId>langchain4j-cdi-portable-ext</artifactId>
+            <version>0.0.7</version>
         </dependency>
-
+        <dependency>
+            <groupId>dev.langchain4j.cdi</groupId>
+            <artifactId>langchain4j-cdi-config</artifactId>
+            <version>0.0.7</version>
+        </dependency>
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j</artifactId>
+            <version>1.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j-open-ai</artifactId>
+            <version>1.5.0</version>
+        </dependency>
 
     </dependencies>
 
@@ -54,7 +68,7 @@
                     <runtimeArtifact>
                         <groupId>io.openliberty.beta</groupId>
                         <artifactId>openliberty-runtime</artifactId>
-                        <version>25.0.0.10-beta</version>
+                        <version>26.0.0.3-beta</version>
                         <type>zip</type>
                     </runtimeArtifact>
 

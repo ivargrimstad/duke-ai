@@ -6,17 +6,10 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.MediaType;
-import org.omnifaces.ai.AIProvider;
-import org.omnifaces.ai.AIService;
-import org.omnifaces.ai.cdi.AI;
 
 @Path("ai")
 public class DukesAIResource {
 
-    @AI(provider = AIProvider.OPENAI,
-            apiKey = "${System.getenv('OPENAI_API_KEY')}",
-            model = "gpt-5.2"
-    )
     @Inject
     AIService aiService;
 
