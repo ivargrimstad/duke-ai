@@ -24,25 +24,11 @@
         </dependency>
 
         <dependency>
-            <groupId>dev.langchain4j.cdi</groupId>
-            <artifactId>langchain4j-cdi-portable-ext</artifactId>
-            <version>0.0.7</version>
+            <groupId>org.omnifaces</groupId>
+            <artifactId>omnihai</artifactId>
+            <version>1.0</version>
         </dependency>
-        <dependency>
-            <groupId>dev.langchain4j.cdi</groupId>
-            <artifactId>langchain4j-cdi-config</artifactId>
-            <version>0.0.7</version>
-        </dependency>
-        <dependency>
-            <groupId>dev.langchain4j</groupId>
-            <artifactId>langchain4j</artifactId>
-            <version>1.5.0</version>
-        </dependency>
-        <dependency>
-            <groupId>dev.langchain4j</groupId>
-            <artifactId>langchain4j-open-ai</artifactId>
-            <version>1.5.0</version>
-        </dependency>
+
 
     </dependencies>
 
