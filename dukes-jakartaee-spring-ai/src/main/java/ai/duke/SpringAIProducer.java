@@ -12,16 +12,16 @@ public class SpringAIProducer {
 
     private AnnotationConfigApplicationContext springCtx;
 
-    @Produces
-    public SpringAIService getSpringAIService() {
-        return springCtx.getBean(SpringAIService.class);
-    }
-
     @PostConstruct
     public void init() {
         springCtx = new AnnotationConfigApplicationContext();
         springCtx.register(SpringAIApplication.class);
         springCtx.refresh();
+    }
+
+    @Produces
+    public SpringAIService getSpringAIService() {
+        return springCtx.getBean(SpringAIService.class);
     }
 
 }
